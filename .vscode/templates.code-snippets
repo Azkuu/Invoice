@@ -1,0 +1,59 @@
+{
+	// Place your invoice workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// \"Print to console\": {
+	// 	\"scope\": \"javascript,typescript\",
+	// 	\"prefix\": \"log\",
+	// 	\"body\": [
+	// 		\"console.log('$1');\",
+	// 		\"$2\"
+	// 	],
+	// 	\"description\": "Log output to console"
+    // }
+
+    "Admin Template Generator": {
+        "scope": "blade",
+        "prefix": "admin_template",
+        "body": [
+            "@extends('layouts.app')",
+            "\n@section('breadcrumbs')",
+            "\t<li class=\"breadcrumb-item\"><a href=\"{{ route('admin.invoicing.dashboard')}}\">Invoicing</a></li>",
+            "\t<li class=\"breadcrumb-item\"><a href=\"#\">Settings</a></li>",
+
+            "@endsection",
+
+            "\n@section('content')",
+            "\t<div class=\"card mt-3\">",
+               "\t\t<div class=\"card-body\">",
+               "\t\t\t<div class=\"row\">",
+               "\t\t\t<div class=\"col-10\">",
+               "\t\t\t\t<h3>This is a title <small class=\"text-muted\">This is a subtitle</small></h3>",
+               "\t\t\t</div>",
+               "\t\t\t<div class=\"col-2\">",
+               "\t\t\t\t<ul class=\"navbar-nav float-right\">",
+               "\t\t\t\t\t<li class=\"nav-item dropdown\">",
+               "\t\t\t\t\t\t<a id=\"navbarDropdown\" class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\"data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" v-pre>",
+               "\t\t\t\t\t\t\tOptions <span class=\"caret\"></span>",
+               "\t\t\t\t\t\t</a>",
+               "\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"navbarDropdown\">",
+               "\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Option 1 </a>",
+
+               "\t\t\t\t\t\t</div>",
+               "\t\t\t\t\t</li>",
+               "\t\t\t\t</ul>",
+               "\t\t\t</div>",
+               "\t\t</div>",
+               "\t\t<hr>",
+               "\t</div>",
+            "</div>",
+            "@endsection"
+
+        ],
+        "description": "Generate an admin blade template for our views"
+    }
+}

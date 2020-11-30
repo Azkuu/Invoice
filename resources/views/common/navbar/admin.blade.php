@@ -1,0 +1,40 @@
+<li class="nav-item dropdown">
+
+
+
+    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" v-pre>
+        Invoicing <span class="caret"></span>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Dashboard </a>
+        <a class="dropdown-item" href="#">Create Invoice </a>
+        <div class="dropdown-divider"> </div>
+        <a href="#" class="dropdown-item">Recent Invoice</a>
+        <a href="#" class="dropdown-item">Overdue Invoice</a>
+        <div class="div dropdown-divider"> </div>
+        <a href="{{ route('admin.invoicing.settings.dashboard') }}" class="dropdown-item">Settings</a>
+
+
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+
+    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" v-pre>
+        Payment <span class="caret"></span>
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Dashboard </a>
+        <a class="dropdown-item" href="#">Log a Payment</a>
+        <a class="dropdown-item" href="#">Dashboard </a>
+        <a class="dropdown-item" href="#">Overdue Payment </a>
+
+
+    </div>
+
+
+</li>
