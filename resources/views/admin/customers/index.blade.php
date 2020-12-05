@@ -22,7 +22,8 @@
                                 Options <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Option 1 </a>
+                                <a class="dropdown-item" href="{{ route('admin.customers.create')}}">Create Customer
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -42,8 +43,10 @@
                         <td> {{ $customer->name }}</td>
                         <td>
                             <div class="btn-group">
-                                <a href="" class="btn btn-primary">view</a>
-                                <a href="" class="btn btn-warning">Edit</a>
+                                <a href="{{ route('admin.customers.show', $customer->id) }}"
+                                    class="btn btn-sm btn-primary">view</a>
+                                <a href="{{ route('admin.customers.edit', $customer->id) }}"
+                                    class="btn btn-sm btn-warning">Edit</a>
                             </div>
                         </td>
                     </tr>

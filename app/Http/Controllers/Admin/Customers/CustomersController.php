@@ -54,9 +54,9 @@ class CustomersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Customer $customer)
     {
-        //
+        return view('admin.customers.show', compact('customer'));
     }
 
     /**
@@ -65,9 +65,9 @@ class CustomersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Customer $customer)
     {
-        //
+        return view('admin.customers.edit', compact('customer'));
     }
 
     /**
@@ -77,9 +77,15 @@ class CustomersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Customer $customer)
     {
-        //
+        $request->validate([
+         'name' => 'required',
+         'email' => 'required'
+     ]);
+        $customer->update($request->all());
+
+        return redirect()->route('admin.customers.show', $customer->id)->with('success', 'You have successfully updated the customer');
     }
 
     /**
@@ -88,8 +94,10 @@ class CustomersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Customer $customer)
     {
-        //
+        $customer->delete();
+
+        return redirect()->route('admin.customers.dashboard')->with('warning', 'You have successfully deleted the customer');
     }
 }

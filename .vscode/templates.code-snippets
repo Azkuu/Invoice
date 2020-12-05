@@ -28,7 +28,7 @@
             "@endsection",
 
             "\n@section('content')",
-            "div class=\"<container\">",
+            "<div class=\"container\">",
 
             "@include('components.alerts.pack')",
             "\t<div class=\"card mt-3\">",
@@ -52,6 +52,7 @@
                "\t\t\t</div>",
                "\t\t</div>",
                "\t\t<hr>",
+               "\t\t{{-- content here --}}",
                "\t</div>",
             "\t</div>",
             "</div>",
