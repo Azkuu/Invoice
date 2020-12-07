@@ -11,4 +11,13 @@ class InvoicingController extends Controller
     {
         return view('admin.invoicing.index');
     }
+    public function create()
+    {
+        return view('admin.invoicing.create');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
+    }
 }
