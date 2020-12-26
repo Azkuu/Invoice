@@ -77,7 +77,8 @@
 </div> --}}
 @endsection
 
-@push('footer-scripts')
+@push('footer-scripts'
+)
 <script>
     console.log('hello')
     var createForn = new Vue({

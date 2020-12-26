@@ -8,4 +8,5 @@ return [
     'province' => 'BAnting',
     'country' => 'Melaka',
     'postal_code' => '47500-6',
+    'email' => 'cakarewala@gmail.com'
 ];
